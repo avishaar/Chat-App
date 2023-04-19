@@ -1,5 +1,6 @@
 import styles from './styles.module.css';
 import { useNavigate } from 'react-router-dom'; 
+import Logo from '../img/tti-trade.png';
 
 const Home = ({ username, setUsername, room, setRoom, socket }) => {
   const navigate = useNavigate(); 
@@ -15,8 +16,13 @@ const Home = ({ username, setUsername, room, setRoom, socket }) => {
   return (
     <div className={styles.container}>
       <div className={styles.formContainer}>
-        <h1>{`<>DevRooms</>`}</h1>
-        <input
+          
+          <h1 
+            className={styles.homeTitle}>
+            <img src={Logo} alt="" />
+            Student Chat Room
+          </h1> 
+          <input
           className={styles.input}
           placeholder='Username...'
           onChange={(e) => setUsername(e.target.value)}
@@ -26,11 +32,11 @@ const Home = ({ username, setUsername, room, setRoom, socket }) => {
           className={styles.input}
           onChange={(e) => setRoom(e.target.value)}
         >
-          <option>-- Select Room --</option>
-          <option value='javascript'>JavaScript</option>
-          <option value='node'>Node</option>
-          <option value='express'>Express</option>
-          <option value='react'>React</option>
+          <option> Select Room </option>
+          <option value='assignment'>Assignment Help</option>
+          <option value='general'>General</option>
+          <option value='resources'>Resources</option>
+          <option value='random'>Random</option>
         </select>
 
         <button

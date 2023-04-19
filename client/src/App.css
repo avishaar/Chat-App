@@ -38,9 +38,16 @@ body {
 }
 .btn-primary {
   background: rgb(153, 217, 234);
-  color: rgb(0, 24, 111);
+  color: rgb(28, 43, 97);
 }
 .btn-secondary {
-  background: rgb(0, 24, 111);
+  background: rgb(28, 43, 97);
+  border: 1px solid white;
   color: #fff;
+}
+.btn-secondary:hover {
+  color: rgb(28, 43, 97);
+  background-color: white;
+  border: 1px solid rgb(28, 43, 97);
+  transition: 0.2s;
 }
