@@ -5,6 +5,7 @@ const app = express();
 const http = require('http');
 const cors = require('cors');
 const { Server } = require('socket.io');
+const harperSaveMessage = require('./services/harper-save-message');
 
 app.use(cors());
 
@@ -49,6 +50,14 @@ io.on('connection', (socket) => {
   socket.to(room).emit('chatroom_users', chatRoomUsers);
   socket.emit('chatroom_users', chatRoomUsers);
   });
+
+  socket.on('send_message', (data) => {
+    const { message, username, room, __createdtime__ } = data;
+    io.in(room).emit('receive_message', data);
+    harperSaveMessage(message, username, room, __createdtime__)
+      .then((response) => console.log(response))
+      .catch((err) => console.log(err));
+  });
 });
 
-server.listen(4000, () => 'Server is running on port 4000');
+server.listen(4000, () => 'Server is running on port 3000');
