@@ -1,3 +1,5 @@
+require('dotenv').config();
+console.log(process.env.HARPERDB_URL);
 const express = require('express');
 const app = express();
 const http = require('http');
