@@ -6,7 +6,7 @@ body {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background: rgb(63, 73, 204);
+  background: rgb(5, 96, 142);
 }
 ::-webkit-scrollbar {
   width: 20px;
@@ -32,13 +32,26 @@ body {
   border: none;
 }
 .btn-outline {
-  color: rgb(153, 217, 234);
-  border: 1px solid rgb(153, 217, 234);
-  background: rgb(63, 73, 204);
+  color: rgb(46, 45, 45);
+  border: 1px solid rgb(46, 45, 45);
+  background: rgb(5, 96, 142);
+}
+.btn-outline:hover {
+ color: white;
+ border: 1px solid white;
+ background: rgb(5, 96, 142);
+ transition: 0.2s;
 }
 .btn-primary {
-  background: rgb(153, 217, 234);
-  color: rgb(28, 43, 97);
+  background: rgb(46, 45, 45);
+  color: white;
+  border: 1px solid rgb(46, 45, 45);
+}
+.btn-primary:hover {
+  background: rgb(5, 96, 142);
+  color: white;
+  border: 1px solid white;
+  transition: 0.2s;
 }
 .btn-secondary {
   background: rgb(28, 43, 97);
