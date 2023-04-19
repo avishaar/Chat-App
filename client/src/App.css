@@ -34,18 +34,18 @@ body {
 .btn-outline {
   color: rgb(46, 45, 45);
   border: 1px solid rgb(46, 45, 45);
-  background: rgb(5, 96, 142);
+  background: white;
 }
 .btn-outline:hover {
  color: white;
  border: 1px solid white;
- background: rgb(5, 96, 142);
+ background: rgb(46, 45, 45);
  transition: 0.2s;
 }
 .btn-primary {
   background: rgb(46, 45, 45);
   color: white;
-  border: 1px solid rgb(46, 45, 45);
+  border: 1px solid white;
 }
 .btn-primary:hover {
   background: rgb(5, 96, 142);
