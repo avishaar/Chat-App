@@ -26,7 +26,6 @@ const Messages = ({ socket }) => {
     socket.on('last_100_messages', (last100Messages) => {
       console.log('Last 100 messages:', JSON.parse(last100Messages));
       last100Messages = JSON.parse(last100Messages);
-      // Sort these messages by __createdtime__
       last100Messages = sortMessagesByDate(last100Messages);
       setMessagesReceived((state) => [...last100Messages, ...state]);
     });
